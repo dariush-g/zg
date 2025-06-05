@@ -1,0 +1,27 @@
+[package]
+name = "zg"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = ["gm", "server"]
+
+[[bin]]
+name = "game"
+path = "gm/src/main.rs"
+
+[[bin]]
+name = "server"
+path = "server/src/main.rs"
+
+[dependencies]
+server = { path = "server", version = "*" }
+gm = { path = "gm", version = "*" }
+uuid = { version = "1.16.0", features = ["v4"] }
+bevy = { version = "*", features = ["bevy_dev_tools"] }
+serde = { version = "1.0.219", features = ["derive"] }
+tokio = { version = "*", features = ["full"] }
+renet = { version = "*", features = ["bevy"] }
+serde_json = "*"
+bevy_egui = "0.34.1"
+bincode = "1.3"

@@ -1,0 +1,12 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+gm = { path = "../gm" }
+bevy = { version = "*", features = ["bevy_dev_tools"] }
+serde = { version = "*", features = ["derive"] }
+tokio = { version = "*", features = ["full"] }
+renet = { version = "*", features = ["bevy"] }
+bincode = "1.3"
